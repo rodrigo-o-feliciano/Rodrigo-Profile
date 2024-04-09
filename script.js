@@ -1,6 +1,15 @@
 particlesJS.load('particles-container', 'particlesjs-config.json');
 
 function toggleMode() {
+    // Reset/destroy with Dom the previous particleJS instance to avoid accumulation and slowdowns
+window.pJSDom = window.pJSDom.filter((pJSInstance, index) => {
+    if (pJSInstance.pJS.canvas.el.parentNode.id === 'particles-container') {
+        pJSInstance.pJS.fn.vendors.destroypJS();
+        return false;
+    }
+    return true;
+});
+/*----------------------Start-----------------------*/ 
     const html = document.documentElement;
     html.classList.toggle("light");
 
