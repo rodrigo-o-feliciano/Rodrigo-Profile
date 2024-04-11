@@ -1,7 +1,7 @@
 particlesJS.load('particles-container', 'particlesjs-config.json');
 
 function toggleMode() {
-    // Reset/destroy with Dom the previous particleJS instance to avoid accumulation and slowdowns
+    // Resets/destroys the previous particleJS instance to avoid accumulation and slowdowns
 window.pJSDom = window.pJSDom.filter((pJSInstance, index) => {
     if (pJSInstance.pJS.canvas.el.parentNode.id === 'particles-container') {
         pJSInstance.pJS.fn.vendors.destroypJS();
@@ -9,7 +9,7 @@ window.pJSDom = window.pJSDom.filter((pJSInstance, index) => {
     }
     return true;
 });
-/*----------------------Start-----------------------*/ 
+
     const html = document.documentElement;
     html.classList.toggle("light");
 
@@ -26,7 +26,7 @@ window.pJSDom = window.pJSDom.filter((pJSInstance, index) => {
                 }
             },
             color: {
-                value: "#000000" // Default to light theme
+                value: "#7dce82" // Default to light theme
             },
             shape: {
                 type: "circle",
@@ -66,8 +66,8 @@ window.pJSDom = window.pJSDom.filter((pJSInstance, index) => {
             line_linked: {
                 enable: true,
                 distance: 112.08069810263392,
-                color: "#000000", // Default to light theme
-                opacity: 0.4,
+                color: "#fff", // DEFFFC Default to light theme
+                opacity: 0.8,
                 width: 0.9606916980225765
             },
             move: {
