@@ -10,6 +10,7 @@
     --bg-url: url(./assets/bg-mobile.jpg);
     --back-botao: rgba(255, 255, 255, 0.1);
     --border-botao: rgba(255, 255, 255, 0.5);
+    --border-botao-hover: rgba(255, 255, 255, 0.6);
     --back-botao-hover: rgba(255, 255, 255, 0.05);
     --back-icon-hover: rgb(255, 255, 255,0.2);
     --switch-mode-icon: url(./assets/moon-stars.svg);
@@ -17,11 +18,14 @@
 
 .light{
     --text-color: black;
-    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --bg-url: background-color: #ffc2e2;
+    background-image: linear-gradient(46deg, #ffc2e2 0%, #fbbf27 100%);
+    ;
     --back-botao: rgba(0, 0, 0, 0.1);
-    --border-botao: rgba(0, 0, 0, 0.5);
+    --border-botao: rgba(0, 0, 0, 0.212);
+    --border-botao-hover: rgba(0, 0, 0, 0.25);
     --back-botao-hover: rgba(0, 0, 0, 0.25);
-    --back-icon-hover: rgb(0, 0, 0, 0.2);
+    --back-icon-hover: rgb(0, 0, 0, 0.1);
     --switch-mode-icon: url(./assets/sun.svg);
 }
 
@@ -62,7 +66,7 @@ body{
     margin: 20px auto 0px;
     padding: 1.5px;
     position: relative;
-    z-index: 2
+    z-index: 2;
 }
 #profile p{ 
     text-align: center;
@@ -94,6 +98,7 @@ body{
 
 .light #switch button{
     animation: slide-in 0.4s forwards;
+    
 }
 
 #switch button:hover {
@@ -129,19 +134,20 @@ ul li a{
     border: 1px solid var(--border-botao);
     border-radius: 20px;
 
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 
     text-decoration: none;
     font-weight: 500;
 
-    transition: border 0.2s, border-radius 0.2s;
+    transition: border 0.2s, transform 0.5s;
 }
 
 ul li a:hover{
     background: var(--back-botao-hover);
-    border: 1.5px solid var(--text-color);
-    border-radius: 100px;
+    border: 1.5px solid var(--border-botao-hover);
+    
+    transform: scale(1.06) 
 }
 
 #icons{
@@ -154,13 +160,16 @@ ul li a:hover{
 #icons a {
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    margin: 11px;
+    padding: 5px;
     transition: 0.2s;
     border-radius: 50%;
 
+    transition: transform 0.3s;
 }
 #icons a:hover {
     background-color: var(--back-icon-hover);
+    transform: scale(1.3);
 }
 
 @keyframes slide-in {
